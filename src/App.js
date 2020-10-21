@@ -1,10 +1,32 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
-
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+  Link,
+  Redirect,
+  useHistory,
+  useLocation
+} from "react-router-dom";
+import HomePage from './components/HomePage/HomePage';
 function App() {
   return (
-    <h1>Hello World</h1>
+    <Router>
+      <Switch>
+        <Route exact path="/">
+          <HomePage />
+        </Route>
+        {/* <Route path="/about">
+        <About />
+      </Route> */}
+        {/* <Route path="/dashboard">
+        <Dashboard />
+      </Route> */}
+      </Switch>
+    </Router>
+
+
   );
 }
 
